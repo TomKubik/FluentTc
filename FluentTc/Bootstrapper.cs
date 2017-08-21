@@ -25,6 +25,7 @@ namespace FluentTc
             builder.RegisterType<FileSystem>().As<IFileSystem>();
             builder.RegisterType<TeamCityServiceMessages>().AsImplementedInterfaces().SingleInstance();
             builder.RegisterAssemblyTypes(typeof(Bootstrapper).Assembly).AsImplementedInterfaces();
+            builder.RegisterAssemblyTypes(typeof(IConnectedTc).Assembly).AsImplementedInterfaces();
             OverrideRegistrations(builder, m_Overrides);
             var container = builder.Build();
 
