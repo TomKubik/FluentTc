@@ -56,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FluentTc.Contract\FluentTc.Contract.csproj">
+      <Project>{226fdcdd-ef43-45b2-bcde-9ea4638d5e1e}</Project>
+      <Name>FluentTc.Contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FluentTc\FluentTc.csproj">
       <Project>{7adb6e1b-2c4e-4094-bf6d-71ce797232d3}</Project>
       <Name>FluentTc</Name>
