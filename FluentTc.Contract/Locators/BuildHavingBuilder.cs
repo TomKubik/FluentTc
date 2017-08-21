@@ -27,7 +27,7 @@ namespace FluentTc.Locators
         IBuildHavingBuilder Project(Action<IBuildProjectHavingBuilder> projectHavingBuilder);
     }
 
-    internal class BuildHavingBuilder : IBuildHavingBuilder
+    public class BuildHavingBuilder : IBuildHavingBuilder
     {
         private const string DateFormat = "yyyyMMddTHHmmss+0000";
 

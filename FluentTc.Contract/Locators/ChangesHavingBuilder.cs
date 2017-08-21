@@ -1,15 +1,14 @@
 using System;
 using System.Collections.Generic;
-using FluentTc.Engine;
 
 namespace FluentTc.Locators
 {
-    internal interface IChangesHavingBuilder
+    public interface IChangesHavingBuilder
     {
         IChangesHavingBuilder Build(Action<IBuildHavingBuilder> build);
     }
 
-    internal class ChangesHavingBuilder : IChangesHavingBuilder
+    public class ChangesHavingBuilder : IChangesHavingBuilder
     {
         private readonly List<string> m_Having = new List<string>();
 

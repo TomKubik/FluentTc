@@ -13,7 +13,7 @@ namespace FluentTc.Locators
         IBuildParameterSelectListTypeBuilder WithSeparator(string separator);
     }
 
-    internal class BuildParameterSelectListTypeBuilder : IBuildParameterSelectListTypeBuilder
+    public class BuildParameterSelectListTypeBuilder : IBuildParameterSelectListTypeBuilder
     {
         private readonly List<Tuple<string, string>> m_values = new List<Tuple<string, string>>();
 

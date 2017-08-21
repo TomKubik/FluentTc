@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FluentTc</RootNamespace>
     <AssemblyName>FluentTc</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -67,67 +69,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\RevisionsList.cs" />
-    <Compile Include="Domain\RevisionsWrapper.cs" />
-    <Compile Include="Domain\SourceBuildType.cs" />
-    <Compile Include="Domain\TestOccurrences.cs" />
     <Compile Include="Engine\VCSRootAttacher.cs" />
     <Compile Include="Engine\VCSRootCreator.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Locators\BuildProjectFieldValueBuilder.cs" />
-    <Compile Include="Locators\BuildState.cs" />
-    <Compile Include="Locators\BuildFieldValueBuilder.cs" />
-    <Compile Include="Locators\OnChangeHavingBuilder.cs" />
-    <Compile Include="Locators\MoreOptionsHavingBuilder.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Domain\AgentPool.cs" />
-    <Compile Include="Domain\AgentRequirement.cs" />
-    <Compile Include="Domain\AgentRequirements.cs" />
-    <Compile Include="Domain\ArtifactDependencies.cs" />
-    <Compile Include="Domain\ArtifactDependency.cs" />
-    <Compile Include="Domain\Assignment.cs" />
-    <Compile Include="Domain\Build.cs" />
-    <Compile Include="Domain\BuildModel.cs" />
-    <Compile Include="Domain\BuildConfiguration.cs" />
-    <Compile Include="Domain\BuildStep.cs" />
-    <Compile Include="Domain\BuildSteps.cs" />
-    <Compile Include="Domain\BuildTrigger.cs" />
-    <Compile Include="Domain\BuildTriggers.cs" />
-    <Compile Include="Domain\BuildTypeWrapper.cs" />
-    <Compile Include="Domain\BuildWrapper.cs" />
-    <Compile Include="Domain\Agent.cs" />
-    <Compile Include="Domain\AgentWrapper.cs" />
-    <Compile Include="Domain\Change.cs" />
-    <Compile Include="Domain\ChangedFile.cs" />
-    <Compile Include="Domain\ChangesList.cs" />
-    <Compile Include="Domain\ChangesWrapper.cs" />
-    <Compile Include="Domain\File.cs" />
-    <Compile Include="Domain\FileWrapper.cs" />
-    <Compile Include="Domain\Group.cs" />
-    <Compile Include="Domain\IBuildStatistic.cs" />
-    <Compile Include="Domain\Investigation.cs" />
-    <Compile Include="Domain\InvestigationWrapper.cs" />
-    <Compile Include="Domain\Parameters.cs" />
-    <Compile Include="Domain\Project.cs" />
-    <Compile Include="Domain\ProjectWrapper.cs" />
-    <Compile Include="Domain\Properties.cs" />
-    <Compile Include="Domain\Property.cs" />
-    <Compile Include="Domain\PropertyType.cs" />
-    <Compile Include="Domain\ResolutionWrapper.cs" />
-    <Compile Include="Domain\Role.cs" />
-    <Compile Include="Domain\RoleWrapper.cs" />
-    <Compile Include="Domain\SnapshotDependencies.cs" />
-    <Compile Include="Domain\SnapshotDependency.cs" />
-    <Compile Include="Domain\BuildStatisticsModel.cs" />
-    <Compile Include="Domain\Test.cs" />
-    <Compile Include="Domain\TestOccurrence.cs" />
-    <Compile Include="Domain\TestOccurrenceWrapper.cs" />
-    <Compile Include="Domain\User.cs" />
-    <Compile Include="Domain\UserGroupWrapper.cs" />
-    <Compile Include="Domain\UserWrapper.cs" />
-    <Compile Include="Domain\VcsRoot.cs" />
-    <Compile Include="Domain\VcsRootEntries.cs" />
-    <Compile Include="Domain\VcsRootEntry.cs" />
     <Compile Include="ConnectedTc.cs" />
     <Compile Include="Engine\AgentEnabler.cs" />
     <Compile Include="Engine\AgentHavingBuilderFactory.cs" />
@@ -175,43 +119,18 @@
     <Compile Include="Exceptions\MoreThanOneBuildConfigurationFoundException.cs" />
     <Compile Include="Exceptions\MoreThanOneBuildFoundException.cs" />
     <Compile Include="LocalTc.cs" />
-    <Compile Include="Locators\BranchHavingBuilder.cs" />
-    <Compile Include="Locators\BranchHavingBuilderFactory.cs" />
-    <Compile Include="Locators\BuildConfigurationHavingBuilder.cs" />
-    <Compile Include="Locators\BuildConfigurationHavingBuilderFactory.cs" />
-    <Compile Include="Locators\BuildHavingBuilder.cs" />
-    <Compile Include="Locators\BuildHavingBuilderFactory.cs" />
-    <Compile Include="Locators\BuildParameterCheckboxTypeBuilder.cs" />
-    <Compile Include="Locators\BuildParametersBuilder.cs" />
-    <Compile Include="Locators\BuildParameterTextTypeBuilder.cs" />
-    <Compile Include="Locators\BuildParameterValueBuilder.cs" />
-    <Compile Include="Locators\BuildProjectHavingBuilder.cs" />
-    <Compile Include="Locators\BuildIncludeBuilder.cs" />
-    <Compile Include="Locators\BuildProjectHavingBuilderFactory.cs" />
-    <Compile Include="Locators\BuildStatus.cs" />
-    <Compile Include="Locators\CountBuilder.cs" />
-    <Compile Include="Locators\BuildQueueIdHavingBuilder.cs" />
-    <Compile Include="Locators\BuildConfigurationTemplateHavingBuilder.cs" />
-    <Compile Include="Locators\BuildAdditionalIncludeBuilder.cs" />
-    <Compile Include="Locators\ChangesHavingBuilder.cs" />
-    <Compile Include="Locators\ChangesIncludeBuilder.cs" />
-    <Compile Include="Locators\BuildParameterTypeBuilder.cs" />
-    <Compile Include="Locators\BuildParameterSelectListTypeBuilder.cs" />
-    <Compile Include="Locators\LocatorBuilder.cs" />
-    <Compile Include="Locators\QueueHavingBuilder.cs" />
-    <Compile Include="Locators\AgentHavingBuilder.cs" />
-    <Compile Include="Locators\TeamCityConnectionDetails.cs" />
-    <Compile Include="Locators\UserHavingBuilder.cs" />
-    <Compile Include="Locators\UserHavingBuilderFactory.cs" />
-    <Compile Include="Locators\GitVCSRootBuilder.cs" />
-    <Compile Include="Locators\VCSRootEntryBuilder.cs" />
     <Compile Include="RemoteTc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Locators\TeamCityConfigurationBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FluentTc.nuspec" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FluentTc.Contract\FluentTc.Contract.csproj">
+      <Project>{226fdcdd-ef43-45b2-bcde-9ea4638d5e1e}</Project>
+      <Name>FluentTc.Contract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
@@ -221,6 +140,11 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)FluentTc.dll" "C:\Workspaces\BitBucket\Tomas.Kubik\maia\Maia\libraries\FluentTc.dll"
+copy /Y "$(TargetDir)FluentTc.pdb" "C:\Workspaces\BitBucket\Tomas.Kubik\maia\Maia\libraries\FluentTc.pdb"
+copy /Y "$(TargetDir)ICSharpCode.SharpZipLib.dll" "C:\Workspaces\BitBucket\Tomas.Kubik\maia\Maia\libraries\ICSharpCode.SharpZipLib.dll"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

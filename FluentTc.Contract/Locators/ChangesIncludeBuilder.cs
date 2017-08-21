@@ -10,7 +10,7 @@ namespace FluentTc.Locators
         IChangesIncludeBuilder IncludeDefaults();
     }
 
-    internal class ChangesIncludeBuilder : IChangesIncludeBuilder
+    public class ChangesIncludeBuilder : IChangesIncludeBuilder
     {
         readonly IList<string> m_Properties = new List<string>(new[]
         {
@@ -40,7 +40,7 @@ namespace FluentTc.Locators
             return this;
         }
 
-        internal string GetColumns()
+        public string GetColumns()
         {
             return string.Join(",", m_Properties);
         }

@@ -1,10 +1,5 @@
 namespace FluentTc.Engine
 {
-    public interface IBuildParameterHavingBuilder
-    {
-        void ParameterName(string parameterName);
-    }
-
     public class BuildParameterHavingBuilder : IBuildParameterHavingBuilder
     {
         private string m_ParameterName;

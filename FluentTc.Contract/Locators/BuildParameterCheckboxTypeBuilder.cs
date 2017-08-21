@@ -8,7 +8,7 @@ namespace FluentTc.Locators
         IBuildParameterCheckboxTypeBuilder WithUncheckedValue(string uncheckedValue);
     }
 
-    internal class BuildParameterCheckboxTypeBuilder : IBuildParameterCheckboxTypeBuilder
+    public class BuildParameterCheckboxTypeBuilder : IBuildParameterCheckboxTypeBuilder
     {
         private string m_checkedValue;
         private string m_uncheckedValue;

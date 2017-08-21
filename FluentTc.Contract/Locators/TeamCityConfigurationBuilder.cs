@@ -45,7 +45,7 @@ namespace FluentTc.Locators
             return this;
         }
 
-        internal ITeamCityConnectionDetails GetTeamCityConnectionDetails()
+        public ITeamCityConnectionDetails GetTeamCityConnectionDetails()
         {
             return new TeamCityConnectionDetails(m_TeamCityHost, m_Username, m_Password, m_Username.Equals("guest"), m_UseSsl);
         }

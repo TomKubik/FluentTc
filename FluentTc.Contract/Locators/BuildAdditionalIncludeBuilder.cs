@@ -9,9 +9,9 @@ namespace FluentTc.Locators
 
     public class BuildAdditionalIncludeBuilder : IBuildAdditionalIncludeBuilder
     {
-        internal bool ShouldIncludeChanges { get; set; }
+        public bool ShouldIncludeChanges { get; set; }
 
-        internal Action<IChangesIncludeBuilder> ChangesInclude { get; set; }
+        public Action<IChangesIncludeBuilder> ChangesInclude { get; set; }
 
         public BuildAdditionalIncludeBuilder()
         {

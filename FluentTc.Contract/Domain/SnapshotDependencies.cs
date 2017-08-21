@@ -9,6 +9,6 @@ namespace FluentTc.Domain
             return "snapshot-dependencies";
         }
 
-        public List<SnapshotDependency> SnapshotDependency { get; set; }
+        public List<BuildModel> Build { get; set; }
     }
 }
