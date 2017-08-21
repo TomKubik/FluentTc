@@ -13,7 +13,7 @@ namespace FluentTc.Locators
         IMoreOptionsHavingBuilder OnChange(Action<IOnChangeHavingBuilder> onChangeHavingBuilderAction);
     }
 
-    internal class MoreOptionsHavingBuilder : IMoreOptionsHavingBuilder
+    public class MoreOptionsHavingBuilder : IMoreOptionsHavingBuilder
     {
         private string m_Comment;
         private string m_BranchName;

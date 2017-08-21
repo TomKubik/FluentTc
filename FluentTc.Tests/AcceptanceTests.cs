@@ -984,20 +984,20 @@ namespace FluentTc.Tests
                 Id = "bt123",
                 SnapshotDependencies = new SnapshotDependencies
                 {
-                    SnapshotDependency = new List<SnapshotDependency>
+                    Build = new List<BuildModel>
                     {
-                        new SnapshotDependency
+                        new BuildModel
                         {
-                            Id = "SpanshotDepId",
-                            SourceBuildType = new SourceBuildType()
-                            {
-                                Id = "SnapshotDepBuildConfig",
-                                Name = "Snapshot Dep Build Config 123",
-                                Href = "/httpAuth/app/rest/buildTypes/id:SnapshotDepBuildConfig",
-                                WebUrl = "http://teamcity/viewType.html?buildTypeId=SnapshotDepBuildConfig",
-                                ProjectId = "SnapshotDepProj123",
-                                ProjectName = "SnapshotDep Project 123"
-                            }
+                            //Id = "SpanshotDepId",
+                            //SourceBuildType = new SourceBuildType()
+                            //{
+                            //    Id = "SnapshotDepBuildConfig",
+                            //    Name = "Snapshot Dep Build Config 123",
+                            //    Href = "/httpAuth/app/rest/buildTypes/id:SnapshotDepBuildConfig",
+                            //    WebUrl = "http://teamcity/viewType.html?buildTypeId=SnapshotDepBuildConfig",
+                            //    ProjectId = "SnapshotDepProj123",
+                            //    ProjectName = "SnapshotDep Project 123"
+                            //}
                         }
                     }
                 },
@@ -1030,14 +1030,14 @@ namespace FluentTc.Tests
             var buildConfiguration = connectedTc.GetBuildConfiguration(_ => _.Id("bt123"));
 
             // Assert
-            var snapshotDependency = buildConfiguration.SnapshotDependencies.SnapshotDependency.Single();
-            snapshotDependency.Id.Should().Be("SpanshotDepId");
-            snapshotDependency.SourceBuildType.Id.Should().Be("SnapshotDepBuildConfig");
-            snapshotDependency.SourceBuildType.Name.Should().Be("Snapshot Dep Build Config 123");
-            snapshotDependency.SourceBuildType.Href.Should().Be("/httpAuth/app/rest/buildTypes/id:SnapshotDepBuildConfig");
-            snapshotDependency.SourceBuildType.WebUrl.Should().Be("http://teamcity/viewType.html?buildTypeId=SnapshotDepBuildConfig");
-            snapshotDependency.SourceBuildType.ProjectId.Should().Be("SnapshotDepProj123");
-            snapshotDependency.SourceBuildType.ProjectName.Should().Be("SnapshotDep Project 123");
+            var snapshotDependency = buildConfiguration.SnapshotDependencies.Build.Single();
+            //snapshotDependency.Id.Should().Be("SpanshotDepId");
+            //snapshotDependency.SourceBuildType.Id.Should().Be("SnapshotDepBuildConfig");
+            //snapshotDependency.SourceBuildType.Name.Should().Be("Snapshot Dep Build Config 123");
+            //snapshotDependency.SourceBuildType.Href.Should().Be("/httpAuth/app/rest/buildTypes/id:SnapshotDepBuildConfig");
+            //snapshotDependency.SourceBuildType.WebUrl.Should().Be("http://teamcity/viewType.html?buildTypeId=SnapshotDepBuildConfig");
+            //snapshotDependency.SourceBuildType.ProjectId.Should().Be("SnapshotDepProj123");
+            //snapshotDependency.SourceBuildType.ProjectName.Should().Be("SnapshotDep Project 123");
 
             var artifactDependency = buildConfiguration.ArtifactDependencies.ArtifactDependency.Single();
             artifactDependency.Id.Should().Be("ARTIFACT_DEPENDENCY_1");

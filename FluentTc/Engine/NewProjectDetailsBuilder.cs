@@ -4,13 +4,6 @@ using FluentTc.Locators;
 
 namespace FluentTc.Engine
 {
-    public interface INewProjectDetailsBuilder
-    {
-        INewProjectDetailsBuilder Name(string newProjectName);
-        INewProjectDetailsBuilder Id(string newProjectId);
-        INewProjectDetailsBuilder ParentProject(Action<IBuildProjectHavingBuilder> parentProject);
-    }
-
     internal class NewProjectDetailsBuilder : INewProjectDetailsBuilder
     {
         private string m_ProjectName;

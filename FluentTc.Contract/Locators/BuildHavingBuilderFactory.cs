@@ -1,11 +1,11 @@
 namespace FluentTc.Locators
 {
-    internal interface IBuildHavingBuilderFactory
+    public interface IBuildHavingBuilderFactory
     {
         BuildHavingBuilder CreateBuildHavingBuilder();
     }
 
-    internal class BuildHavingBuilderFactory : IBuildHavingBuilderFactory
+    public class BuildHavingBuilderFactory : IBuildHavingBuilderFactory
     {
         private readonly IUserHavingBuilderFactory m_UserHavingBuilderFactory;
         private readonly IBranchHavingBuilderFactory m_BranchHavingBuilderFactory;

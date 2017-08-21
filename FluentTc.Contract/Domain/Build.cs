@@ -19,6 +19,7 @@ namespace FluentTc.Domain
         List<Change> Changes { get; }
         string WebUrl { get; }
         Properties Properties { get; }
+        SnapshotDependencies SnapshotDependencies { get; }
         void SetChanges(List<Change> changes);
         void SetBuildConfiguration(BuildConfiguration buildConfiguration);
     }
@@ -38,10 +39,11 @@ namespace FluentTc.Domain
         private readonly string m_WebUrl;
         private readonly Properties m_Properties;
         private ITestOccurrences m_TestOccurrences;
+        private SnapshotDependencies m_SnapshotDependencies;
 
         public Build(long id, string number, BuildStatus? status, DateTime startDate, DateTime finishDate,
             DateTime queuedDate, BuildConfiguration buildConfiguration, Agent agent, List<Change> changes, string webUrl,
-            Properties properties, ITestOccurrences testOccurrences, BuildState? state)
+            Properties properties, ITestOccurrences testOccurrences, BuildState? state, SnapshotDependencies snapshotDeps)
         {
             m_Id = id;
             m_Number = number;
@@ -56,6 +58,7 @@ namespace FluentTc.Domain
             m_Changes = changes;
             m_WebUrl = webUrl;
             m_Properties = properties;
+            m_SnapshotDependencies = snapshotDeps;
         }
 
         public long Id
@@ -121,6 +124,11 @@ namespace FluentTc.Domain
         public Properties Properties
         {
             get { return m_Properties; }
+        }
+
+        public SnapshotDependencies SnapshotDependencies
+        {
+            get { return m_SnapshotDependencies; }
         }
 
         public void SetChanges(List<Change> changes)

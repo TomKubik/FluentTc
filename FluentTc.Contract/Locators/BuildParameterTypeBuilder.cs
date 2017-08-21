@@ -16,7 +16,7 @@ namespace FluentTc.Locators
         IBuildParameterTypeBuilder AsText(Action<IBuildParameterTextTypeBuilder> textBuilder);
     }
 
-    internal class BuildParameterTypeBuilder : IBuildParameterTypeBuilder
+    public class BuildParameterTypeBuilder : IBuildParameterTypeBuilder
     {
         private const string DisplayNormal = "normal";
         private const string DisplayHidden = "hidden";

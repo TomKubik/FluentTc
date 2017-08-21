@@ -8,7 +8,7 @@ namespace FluentTc.Locators
         IBuildConfigurationTemplateHavingBuilder Name(string buildConfigurationName);
     }
 
-    internal class BuildConfigurationTemplateHavingBuilder : IBuildConfigurationTemplateHavingBuilder
+    public class BuildConfigurationTemplateHavingBuilder : IBuildConfigurationTemplateHavingBuilder
     {
         private readonly List<string> m_Having = new List<string>();
 

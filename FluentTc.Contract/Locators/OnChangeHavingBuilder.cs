@@ -5,7 +5,7 @@
         IOnChangeHavingBuilder Id(long changeId);
     }
 
-    internal class OnChangeHavingBuilder : IOnChangeHavingBuilder
+    public class OnChangeHavingBuilder : IOnChangeHavingBuilder
     {
         private long m_ChangeId;
 

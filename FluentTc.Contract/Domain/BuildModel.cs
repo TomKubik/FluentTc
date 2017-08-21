@@ -25,5 +25,6 @@ namespace FluentTc.Domain
         public RevisionsWrapper Revisions { get; set; }
         public List<Change> BuildChanges { get; set; }
         public Properties Properties { get; set; }
+        public SnapshotDependencies SnapshotDependencies { get; set; }
     }
 }

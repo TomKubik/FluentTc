@@ -61,7 +61,7 @@ namespace FluentTc.Locators
 
     }
 
-    internal class GitVCSRootBuilder: IGitVCSRootBuilder
+    public class GitVCSRootBuilder: IGitVCSRootBuilder
     {
         private VcsRoot m_VCSRoot = new VcsRoot();
 
@@ -203,7 +203,7 @@ namespace FluentTc.Locators
             return this;
         }
 
-        internal VcsRoot GetVCSRoot()
+        public VcsRoot GetVCSRoot()
         {
             return m_VCSRoot;
         }

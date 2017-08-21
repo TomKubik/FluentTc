@@ -1,6 +1,6 @@
 namespace FluentTc.Locators
 {
-    internal interface ITeamCityConnectionDetails
+    public interface ITeamCityConnectionDetails
     {
         string TeamCityHost { get; }
         string Username { get; }
@@ -9,7 +9,7 @@ namespace FluentTc.Locators
         bool UseSSL { get; }
     }
 
-    internal class TeamCityConnectionDetails : ITeamCityConnectionDetails
+    public class TeamCityConnectionDetails : ITeamCityConnectionDetails
     {
         private readonly string m_Password;
         private readonly string m_TeamCityHost;

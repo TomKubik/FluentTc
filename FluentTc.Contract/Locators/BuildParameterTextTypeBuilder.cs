@@ -9,7 +9,7 @@ namespace FluentTc.Locators
         IBuildParameterTextTypeBuilder AsRegex(string regexp, string validationMessage);
     }
 
-    internal class BuildParameterTextTypeBuilder : IBuildParameterTextTypeBuilder
+    public class BuildParameterTextTypeBuilder : IBuildParameterTextTypeBuilder
     {
         private const string AnyValidation = "any";
         private const string RegexValidation = "regex";
