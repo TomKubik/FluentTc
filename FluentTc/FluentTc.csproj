@@ -102,9 +102,6 @@
     <Compile Include="Engine\TeamCityWriterFactory.cs" />
     <Compile Include="Engine\UniversalTypeConverter.cs" />
     <Compile Include="Engine\UserRetriever.cs" />
-    <Compile Include="Exceptions\AgentNotFoundException.cs" />
-    <Compile Include="Exceptions\MissingBuildParameterException.cs" />
-    <Compile Include="Exceptions\MoreThanOneAgentFoundException.cs" />
     <Compile Include="InvestigationRetriever.cs" />
     <Compile Include="Engine\HttpClientWrapper.cs" />
     <Compile Include="Engine\HttpClientWrapperFactory.cs" />
@@ -114,10 +111,6 @@
     <Compile Include="Engine\TeamCityDateFilter.cs" />
     <Compile Include="Engine\TeamcityJsonEncoderDecoderConfiguration.cs" />
     <Compile Include="Engine\ZipExtractor.cs" />
-    <Compile Include="Exceptions\BuildConfigurationNotFoundException.cs" />
-    <Compile Include="Exceptions\BuildNotFoundException.cs" />
-    <Compile Include="Exceptions\MoreThanOneBuildConfigurationFoundException.cs" />
-    <Compile Include="Exceptions\MoreThanOneBuildFoundException.cs" />
     <Compile Include="LocalTc.cs" />
     <Compile Include="RemoteTc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
